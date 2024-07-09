@@ -22,6 +22,27 @@ Ensure you have the necessary dependencies installed:
 pip install -r requirements.txt
 ```
 
+## File Type Support
+
+| File Type | Description | Function |
+|-----------|-------------|----------|
+| PDF       | Portable Document Format | `load_pdf_documents` |
+| CSV       | Comma-Separated Values | `load_csv_documents` |
+| TXT       | Plain Text | `load_txt_documents` |
+| MD        | Markdown | `load_md_documents` |
+| URL       | Web URL | `load_url_documents` |
+| Youtube URL       | Youtube URL | `summarize_transcript_youtube_url` |
+| PPTX      | PowerPoint Presentation | `load_pptx_documents` |
+| DOCX      | Word Document | `load_docx_documents` |
+| XLS       | Excel Spreadsheet | `load_xls_documents` |
+| XLSX      | Excel Spreadsheet | `load_xlsx_documents` |
+| XML       | XML Document | `load_xml_documents` |
+| Google Docs | Documents from Google Drive | `load_gdocs_documents` |
+| Google Sheets | Spreadsheets from Google Drive | `load_gsheets_documents` |
+| Google Slides | Presentations from Google Drive | `load_gslides_documents` |
+| Google PDFs | PDFs from Google Drive | `load_gpdf_documents` |
+| Images | PNG, JPG, JPEG | `generate_concepts_from_img` |
+
 ## Usage
 
 ### Document Loading
@@ -117,31 +138,10 @@ load_gpdf_documents(drive_folder_url: str, verbose=False)
 generate_concepts_from_img(img_url: str)
 ```
 
-## File Type Support
-
-| File Type | Description | Function |
-|-----------|-------------|----------|
-| PDF       | Portable Document Format | `load_pdf_documents` |
-| CSV       | Comma-Separated Values | `load_csv_documents` |
-| TXT       | Plain Text | `load_txt_documents` |
-| MD        | Markdown | `load_md_documents` |
-| URL       | Web URL | `load_url_documents` |
-| PPTX      | PowerPoint Presentation | `load_pptx_documents` |
-| DOCX      | Word Document | `load_docx_documents` |
-| XLS       | Excel Spreadsheet | `load_xls_documents` |
-| XLSX      | Excel Spreadsheet | `load_xlsx_documents` |
-| XML       | XML Document | `load_xml_documents` |
-| Google Docs | Documents from Google Drive | `load_gdocs_documents` |
-| Google Sheets | Spreadsheets from Google Drive | `load_gsheets_documents` |
-| Google Slides | Presentations from Google Drive | `load_gslides_documents` |
-| Google PDFs | PDFs from Google Drive | `load_gpdf_documents` |
-| Images | PNG, JPG, JPEG | `generate_concepts_from_img` |
-
-
 # Request Templates
 
 ## Youtube URL
-
+```json
 {
   "user": {
     "id": "string",
@@ -163,9 +163,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## PDF File
-
+```json
 {
   "user": {
     "id": "string",
@@ -187,9 +187,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## CSV File
-
+```json
 {
   "user": {
     "id": "string",
@@ -211,9 +211,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## TXT File
-
+```json
 {
   "user": {
     "id": "string",
@@ -235,9 +235,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## MD File
-
+```json
 {
   "user": {
     "id": "string",
@@ -259,9 +259,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## URL File
-
+```json
 {
   "user": {
     "id": "string",
@@ -283,9 +283,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## PPTX File
-
+```json
 {
   "user": {
     "id": "string",
@@ -307,9 +307,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## DOCX File
-
+```json
 {
   "user": {
     "id": "string",
@@ -331,9 +331,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## XLS File
-
+```json
 {
   "user": {
     "id": "string",
@@ -355,9 +355,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## XLSX File
-
+```json
 {
   "user": {
     "id": "string",
@@ -379,9 +379,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## XML File
-
+```json
 {
   "user": {
     "id": "string",
@@ -403,9 +403,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## Google Docs File
-
+```json
 {
   "user": {
     "id": "string",
@@ -427,9 +427,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## Google Sheet File
-
+```json
 {
   "user": {
     "id": "string",
@@ -451,9 +451,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## Google Slide File
-
+```json
 {
   "user": {
     "id": "string",
@@ -475,9 +475,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## Google PDF File
-
+```json
 {
   "user": {
     "id": "string",
@@ -499,9 +499,9 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
-
+```
 ## Image File (PNG, JPG, JPEG)
-
+```json
 {
   "user": {
     "id": "string",
@@ -523,3 +523,4 @@ generate_concepts_from_img(img_url: str)
     ]
   }
 }
+```
